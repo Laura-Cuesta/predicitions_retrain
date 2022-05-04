@@ -11,7 +11,7 @@ from flask import Flask, jsonify, request
 os.chdir(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['DEBUG'] = True
-@app.route('/api/v1/retrain', methods=['PUT'])
+@app.route('/api/v1/retrain', methods=['GET', 'POST','PUT'])
 
 
 
