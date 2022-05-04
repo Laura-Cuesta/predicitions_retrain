@@ -7,13 +7,13 @@ os.chdir(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-
+model = pickle.load(open('model/ad_model.pkl','rb'))# leemos el modelo
 
 @app.route('/api/v1/predict', methods=['GET'])# creamos la ruta api para obtener los dtos
 
 def predict():
     
-    # model = pickle.load(open('model/ad_model.pkl','rb'))# leemos el modelo
+    
     # tv = int (input ('introduce el importe para tv: '))
     # radio = int (input ('introduce el importe para radio: '))
     # newspaper = int (input ('introduce el importe para newspaper: '))
