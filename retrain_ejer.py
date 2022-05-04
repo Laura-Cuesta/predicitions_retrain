@@ -9,12 +9,9 @@ from flask import Flask, jsonify, request
 
 import pickle
 
-# absolutepath = os.path.abspath(__file__)
-# print(absolutepath)
+
 os.chdir(os.path.dirname(__file__))
-# print (a)
 app = Flask(__name__)
-# print(app)
 app.config['DEBUG'] = True
 @app.route('/api/v1/retrain', methods=['PUT'])
 
