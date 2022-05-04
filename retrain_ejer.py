@@ -38,7 +38,7 @@ def entrenamiento ():
     rmse = np.sqrt(mean_squared_error(y_test, model.predict(X_test)))
     results.append(mean)
     results.append(rmse)
-    return jsonify(results )
+    return jsonify(results)
 
 
 app.run()
